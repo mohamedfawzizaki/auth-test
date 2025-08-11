@@ -18,6 +18,8 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.AWS_REGION }}
           role-to-assume: arn:aws:iam::501957928859:role/githubActionAssumedRole
+          role-session-name: github-actions-session
+          role-duration-seconds: 3600 # Optional: max depends on role settings
 
       # - name: Assume Deployment Role
         # id: assume
